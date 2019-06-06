@@ -1,5 +1,5 @@
 from django.db import models
-#from django.core.urlresolvers import reverse
+
 
 
 class Asset(models.Model):
@@ -26,14 +26,7 @@ class Task(models.Model):
 
 
 class Worker(models.Model):
-    # skillset_choices =[
-    #     ('Cleaning'),
-    #     ('Dusting and Polishing furnitures'),
-    #     ('Making beds'),
-    #     ('Ironing clothing items'),
-    #     ('organizing work schedule'),
-    #
-    # ]
+    
     workerID = models.IntegerField(primary_key=True)
     worker_name = models.CharField(max_length=250)
     skillset = models.CharField(max_length=250)
@@ -46,9 +39,3 @@ class Worker(models.Model):
 
 
 
-class merge(models.Model):
-    workerID = models.ForeignKey(Worker, on_delete=models.CASCADE)
-    taskID = models.ForeignKey(Task, on_delete=models.CASCADE)
-    assetID = models.ForeignKey(Asset, on_delete=models.CASCADE)
-    timeOfAllocation = models.DateTimeField()
-    taskToBePerformed = models.DateTimeField()
