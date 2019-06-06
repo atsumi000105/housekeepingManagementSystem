@@ -6,7 +6,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    #oganize/
+    #
     url(r'^$', views.base, name='base'),
     #addasset/
     url(r'^addasset/$', views.add_asset, name='add_asset'),
@@ -21,8 +21,5 @@ urlpatterns = [
     #displayworkers
     url(r'^showworkers/$', views.display_workers, name='display_workers'),
 
-    #path('', admin.site.urls),
-
-    #organize/get_tasks_for_worker/{workerID}
-   # url(r'^get_tasks_for_worker/(?P<workerID>[0-9]+)$', views.assign, name='assign'),
+    
 ]
