@@ -4,7 +4,7 @@ from organize.models import Asset, Task, Worker
 class AssetForm(ModelForm):
     class Meta:
         model = Asset
-        fields = ['assetID', 'asset_name', 'volume']
+        fields = '__all__'
 
 
 class TaskForm(ModelForm):
