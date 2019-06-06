@@ -1,0 +1,12 @@
+{% block body %}
+<div class="container">
+    <h1> Allocate Task  </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Save</button>
+    </form>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Add Asset{% endblock %}</title>
+
+{% block body %}
+<div class="col-sm-10">
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save" />
+</form>
+</div>
+{% endblock %}

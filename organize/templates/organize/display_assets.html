@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Assets{% endblock %}</title>
+
+{% block body %}
+<div class="col-sm-10">
+    {% for item in assets %}
+            <p>{{item.assetID}}. {{item.asset_name}} {{item.volume}}</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

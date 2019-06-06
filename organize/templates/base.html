@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<br>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Welcome</a>
+        </div>
+
+        <!-- Items -->
+
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'display_assets' %}"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>&nbsp; Assets</a></li>
+                <li><a href="{% url 'display_tasks' %}"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp; Tasks</a></li>
+                <li><a href="{% url 'display_workers' %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; Workers</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{% url 'add_asset' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Asset
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'add_task' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Task
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'add_worker' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Worker
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>
