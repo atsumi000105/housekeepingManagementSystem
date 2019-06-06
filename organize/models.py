@@ -30,8 +30,7 @@ class Worker(models.Model):
     workerID = models.IntegerField(primary_key=True)
     worker_name = models.CharField(max_length=250)
     skillset = models.CharField(max_length=250)
-    #tasks = models.ForeignKey(Task, on_delete=models.CASCADE)
-
+    
     objects = models.Manager()
 
     def __str__(self):
