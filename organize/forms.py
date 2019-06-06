@@ -15,4 +15,4 @@ class TaskForm(ModelForm):
 class WorkerForm(ModelForm):
     class Meta:
         model = Worker
-        fields = "__all__"
+        fields = '__all__'
